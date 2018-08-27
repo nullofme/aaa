@@ -9,10 +9,11 @@ import Add from '../components/Add.vue';
 import Detail from '../components/Detail.vue'
 export default new Router({
   routes: [
-    {path:'/home',component:Home},
-    {path:'/list',component:List},
+    {path:'/home',component:Home},//是否走缓存
+    {path:'/list',component:List,meta:{keepAlive:true}},
     {path:'/collect',component:Collect},
     {path:'/add',component:Add},
-    {path:'/detail/:id',component:Detail,name:'detail'}
+    {path:'/detail/:id',component:Detail,name:'detail'},
+    {path:'*',redirect:'/home'}
   ]
 })
