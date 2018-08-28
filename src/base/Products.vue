@@ -3,7 +3,8 @@
     <ul class="temp_list">
       <router-link v-for="(item,index) in data" :key="index" tag='li' 
       :to='{name:"detail",params:{id:item.id}}'>
-        <img :src="item.imgUrl">
+        <img v-lazy="item.imgUrl">  
+        <!-- <img :src="item.imgUrl"> -->
         <div>
           <p class="title">{{item.title}}</p>
           <p class="price">{{item.price}}</p>
@@ -22,9 +23,6 @@ export default {
 };
 </script>
 <style>
-ul{
-  width: 100%
-}
 .temp_list {
   padding-right: 10px;
 }

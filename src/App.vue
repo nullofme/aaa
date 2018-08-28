@@ -17,7 +17,10 @@
 import Tab from "./base/Tab.vue";
 export default {
   name: "app",
-  components: { Tab }
+  components: { Tab },
+  mounted() {
+   console.log(1)
+  },
 };
 </script>
 
