@@ -1,7 +1,9 @@
 # aaa
 ### 搭建脚手架
+```
 npm install --global vue-cli   全局安装脚手架      
 vue init webpack my-project  创建webpack的项目
+```
 > A Vue.js project
 
 ## Build Setup
