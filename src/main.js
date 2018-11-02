@@ -3,7 +3,7 @@
 import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
-import store from './store'
+
 //轮播图插件
 import VueAwesomeSwiper from 'vue-awesome-swiper';
 import 'swiper/dist/css/swiper.css';
@@ -29,12 +29,10 @@ router.beforeEach(function(to,from,next){
   }
   
 })
-
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
   router,
-  store,
   components: { App },
   template: '<App/>'
 })
