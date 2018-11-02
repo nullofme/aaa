@@ -16,6 +16,7 @@
 <script>
 import Header from "../base/Header.vue";
 import { products,collects } from "../api";
+import * as Types from '../store/mutation-types.js'
 export default {
   data() {
     return { data: {} };
@@ -32,13 +33,15 @@ export default {
     collect(){
       this.data.isCollected=!this.data.isCollected;
       if(this.data.isCollected){
-collects.unshift(this.data)
+        this.$store.commit(Types.ADD)
+        collects.unshift(this.data)
+
       }else{
-     collects.filter(item=>{
+        this.$store.commit(Types.MINUS);
+        collects.filter(item=>{
          return item.id!=this.data.id
        })
       }
-      
     }
   },
   created() {
