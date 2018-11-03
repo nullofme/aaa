@@ -3,12 +3,13 @@
 import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
-
+import store from './store'
 //轮播图插件
 import VueAwesomeSwiper from 'vue-awesome-swiper';
 import 'swiper/dist/css/swiper.css';
 
 //懒加载插件
+
 import VueLazyload from 'vue-lazyload'
 Vue.config.productionTip = false
 Vue.use(VueAwesomeSwiper);
@@ -33,6 +34,7 @@ router.beforeEach(function(to,from,next){
 new Vue({
   el: '#app',
   router,
+  store,
   components: { App },
   template: '<App/>'
 })
