@@ -7,6 +7,7 @@
     <span>{{$store.state.count}}</span>
     </router-link>
     <router-link  to="/add"><i class="iconfont icon-tianjia">添加</i></router-link>
+    <router-link  to="/address"><i class="iconfont icon-dizhi">地址</i></router-link>
   </div>
 </template>
 <script>

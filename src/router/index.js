@@ -16,6 +16,7 @@ export default new Router({
     {path:'/list',component:()=>import('../components/List.vue'),meta:{keepAlive:true,title:'列表页'}},
     {path:'/collect',component:()=>import('../components/Collect.vue'),meta:{title:'收藏'}},
     {path:'/add',component:()=>import('../components/Add.vue'),meta:{title:'添加'}},
+    {path:'/address',component:()=>import('../components/Address.vue'),meta:{title:'添加'}},
     {path:'/detail/:id',component:()=>import('../components/Detail.vue'),name:'detail',meta:{title:'详情页'}},
     {path:'*',redirect:'/home'}
     // {path:'/home',component:Home},//是否走缓存
