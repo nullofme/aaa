@@ -1,4 +1,4 @@
-// 轮播图one
+// 轮播图master--
 export let slides = [
   'http://img.mall.juzifenqi.com/180823/014cf010-3f61-4421-b7ee-07997b3a8b79.jpg',
   'http://img.mall.juzifenqi.com/180815/2110f19a-0f63-4e76-8d04-70914f5f5e88.jpg',
