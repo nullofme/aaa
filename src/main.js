@@ -19,6 +19,11 @@ Vue.use(VueLazyload, {
   loading: './assets/1.gif',
   attempt: 1
 })
+
+// 引入element-ui
+import ElementUi from 'element-ui'
+import '../node_modules/element-ui/lib/theme-chalk/index.css'
+Vue.use(ElementUi)
 //每步路由都会走的方法、
 router.beforeEach(function(to,from,next){
   if(to.path=='/list'){

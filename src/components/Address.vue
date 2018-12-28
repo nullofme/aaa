@@ -26,6 +26,18 @@
           </div>
     </div>
     <span>{{prov}} {{city}} {{district}}</span>
+
+     <div class="address_2">
+        <el-select v-model="prov" placeholder="请选择">
+            <el-option  v-for="item in arr" :value="item.name"></el-option>
+        </el-select>
+        <el-select v-model="city" placeholder="请选择">
+            <el-option  v-for="item in cityArr" :value="item.name"></el-option>
+        </el-select>
+        <el-select v-model="district" placeholder="请选择">
+            <el-option  v-for="item in districtArr" :value="item"></el-option>
+        </el-select>
+     </div>
   </div>
 </template>
 <script>
@@ -33,19 +45,25 @@ import Header from "../base/Header.vue";
 import { provinceList } from "../api";
 export default {
   data() {
-    return {  
+    return { 
             arr: provinceList,
             prov: '北京',
             city: '北京',
             district: '东城区',
             cityArr: [],
-            districtArr: []
+            districtArr: [],
           }
+  },
+  created() {
+      console.log(this.arr)
   },
   components:{
     Header
   },
    methods: {
+    handleChange(value) {
+        console.log(value);
+      },
             updateCity: function () {
                 for (var i in this.arr) {
                     var obj = this.arr[i];
@@ -87,6 +105,13 @@ export default {
 };
 </script>
 <style scoped='false'>
+.address_2{
+    display: flex;
+    margin-top:100px;
+}
+.address_2 .el-input{
+   width: 150px;
+}
 .container{
   display:flex;
   flex:1;
@@ -100,7 +125,7 @@ ul {
   padding: 20px;
 }
 li {
-  height: 20px;
+ 
   display: flex;
   flex-direction: column;
 }
